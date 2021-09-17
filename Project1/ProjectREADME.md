@@ -12,4 +12,4 @@ take what it would needed. With this I can organize my storage more and know wha
 - Tip: When creating your VM, it may not assume the Disk file you would like to use. When starting the machine a Optical Disk Selector Window may appear, click Add then point
 it to the Ubuntu Desktop Iso file. 
 - 3D Acceleration: This basically means you are giving your VM a virtual GPU, it can help with storage and from keeping your host machine from getting overhwelmed. 
-- Guest Additions:
+- Guest Additions:  Guest Additions are basically devices that are desinged to create a closer relationship between the host and guest OS. While they increase system performance, they can also put your system at higher risk due to it being more connected to the host OS, which allows more attack vectors. 
