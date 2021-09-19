@@ -13,3 +13,6 @@ take what it would needed. With this I can organize my storage more and know wha
 it to the Ubuntu Desktop Iso file. 
 - 3D Acceleration: This basically means you are giving your VM a virtual GPU, it can help with storage and from keeping your host machine from getting overhwelmed. 
 - Guest Additions:  Guest Additions are basically devices that are desinged to create a closer relationship between the host and guest OS. While they increase system performance, they can also put your system at higher risk due to it being more connected to the host OS, which allows more attack vectors. 
+   - In order to install Guest additions all you need to do is click Devices -> Insert Guest Additions CD Image -> Reset your machine -> Hit view and click full screen -> then Click on auto resize guest display and it will display in full screen. You can check if your guest addition is working by typing the following command, "lsmod | grep -i vbox" and it should come out with a vboxguest,vboxvideo and a few other results. 
+
+### Part 2 - Exploring Virtualization
