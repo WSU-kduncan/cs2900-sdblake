@@ -16,4 +16,6 @@
     - Then insert the command, "sudo apt-get install docker-ce docker-ce-cli containerd.io" to install docker
     - Verify that docker is installed correctly by running the following program, "sudo docker run hello-world"
     - If it prints correctly, then you've done it!
-- **Linux Container** 
+  
+- **Skopeo** 
+  -
