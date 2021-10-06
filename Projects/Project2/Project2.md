@@ -17,5 +17,16 @@
     - Verify that docker is installed correctly by running the following program, "sudo docker run hello-world"
     - If it prints correctly, then you've done it!
   
-- **Skopeo** 
-  -
+- **Podman** 
+  - First you need to navigate to your terminal in Ubuntu and enter the follwing commmands to get the setup started
+    - sudo apt-get -y update
+    - sudo apt-get -y install podman
+
+#### Pulling a container image
+- **Docker**
+  - Using "sudo docker images" will let you view the images you have in the registry. 
+  - Then use the command sudo docker image pull hello-world and it will store it to your machine
+  - To view all images on docker use "sudo docker image ls*
+- **Podman**
+  - Using "sudo podman pull (name of image)" will pull an image from the registry and display it to you. You could also use  podman build --pull=true
+  - To view all images on podman you can use the same command as docker, "sudo podman image ls" or list
