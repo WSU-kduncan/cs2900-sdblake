@@ -27,6 +27,31 @@
   - Using "sudo docker images" will let you view the images you have in the registry. 
   - Then use the command sudo docker image pull hello-world and it will store it to your machine
   - To view all images on docker use "sudo docker image ls*
+  - ![image](https://user-images.githubusercontent.com/59904812/136669326-b7d74743-2930-4e03-a488-3ad3c251d059.png)
+
 - **Podman**
   - Using "sudo podman pull (name of image)" will pull an image from the registry and display it to you. You could also use  podman build --pull=true
   - To view all images on podman you can use the same command as docker, "sudo podman image ls" or list
+
+#### Running a container
+  - First, containers are basically runnable instances of an image and it's obivous that it is running when ther is an active process inside of it. Initialzing a container or "Init containers" deal with initializing and preparing the actual environment you run the container on. Once you container is initialized, then it can run the actual enviornment. Once set it up, the other acutally runs the application.
+  - To run and enter shell on docker, you will need the follwing steps.
+    1. It may be important to note your container ID or name. Using "docker ps" you can get Container ID, Name, Status, Ports, Commands, and Images. 
+    2. Use "docker exec -it <container name> /bin/bash to create a bash shell in your container.
+    3. Then use "docker exec -it <container name> <command to execute>" to execute a command. 
+  
+  - To run and enter shell in podman, use the following steps.
+    1. To run an image in podman, you can easily use "podman run image (command)", you can also use this for docker. 
+  - To detach from the containers you can use -d (This runs the containers in the background and prints a new container ID) You can also use "Ctrl+p, then use Ctrl+q" (docker run -d IMAGE)
+
+#### Logs & Status
+  - To view the status and other information of a running container use the command, "sudo docker ps -a"
+  - To view the logs of the container, use "docker logs <container_id> (Which you can get from the ps -a command)*
+  - To view logs on podman use, "podman logs" command
+  - To view the status of podman containersyou can use the same as docker, "podman ps"
+  
+ #### Stopping Containers
+  - To pause a container use, "pause docker" or "pause podman"
+  - To restart a container, use "docker restart" or podman restart"
+  - To resume a container use the "docker unpause <container_name>" or "podman unpause <container_name>"
+  - To stop and kill containers, use docker stop, and docker kill. This is the same with the podman containers as well. 
