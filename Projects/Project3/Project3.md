@@ -1,0 +1,31 @@
+### **Project 3**
+
+---
+
+#### Investigate Available Mounts
+- #### **Docker**
+  - Available Mounts: There are currently 3 types of mounts you can use inside the docker container. 
+Volumes, tmpfs (temporary), and Bind Mounts are the three types of mounts on docker. Volumes are managed
+by the docker engine and can be shared between docker containers. TMPFS mounts are only on the container until
+it is stopped, at the point the data will be lost. Bind Mounts are host machine files which mount
+onto the container with only the host machine managing it.
+  - How to use Mount Types: To create a volume mount, use the command "docker volume create my-vol",
+To inspect it it use "docker volume inspect my-vol". To create a tmpfs mount you would only need to add 
+the --tmpfs flag. For Bind Mount usage, you will be using -v or volume. Since this is mounted to another
+container you will basically be storing things on two systems. Using "iv" combines options when creating
+a mount. To bind different containers you will just need to implmenet "type=bind" when running docker.
+
+- #### **Podman**
+  - Available Mounts: bind, volume, image, tmpfs, and devpts. The default mount option for podman is bind,
+which means an unknown named volume will be created and mounted into the container  when creating the 
+first one. Image mounts will mount the specified image's filesystem, which can be accessed by the host machine,
+and returns that specific location of the image. TMPFS allows the user to create content that is gone when
+the container is stopped. Devpts is basically a virtual filesystem directory and is implemented by chanigng
+the type to devpts, just like you would with image or volume mounts. 
+  - How to use Mount Types: To create these mount types it is the same as you would in docker. You would just
+change the "type=mounttype" to whichever one satisifes your need for the container. Below is an image from
+"docs.podman.io" and shows some examples of these commands. You would implement these when you go to run your 
+container. You will need to specify the source and destination of the container you are using as well.
+  - ![image](https://user-images.githubusercontent.com/59904812/139154965-bb05498e-577b-4db7-b215-9341c05b2a59.png)
+
+#### Investigate building images for container engines
